@@ -1,10 +1,6 @@
 pipeline {
     agent any
     
-    tools {
-        nodejs 'NodeJS-18'
-    }
-    
     stages {
         stage('Checkout') {
             steps {
@@ -16,21 +12,21 @@ pipeline {
         stage('Install dependencies') {
             steps {
                 echo 'Installation des dépendances...'
-                sh 'npm install'
+                bat 'npm install'
             }
         }
         
         stage('Run tests') {
             steps {
                 echo 'Exécution des tests...'
-                sh 'npm test'
+                bat 'npm test'
             }
         }
         
         stage('Build') {
             steps {
                 echo 'Build de l\'application...'
-                sh 'echo "Build terminé avec succès"'
+                bat 'echo Build terminé avec succès'
             }
         }
     }
