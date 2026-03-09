@@ -41,4 +41,4 @@ if (require.main === module) {
   app.listen(port, () => {
     console.log(`Calculatrice API listening at http://localhost:${port}`);
   });
-}
+}// Commentaire de test
